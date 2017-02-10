@@ -19,7 +19,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 public class AVAPurchaseTest {
 
 	@HiveSQL(files = { "sql/purchases/purchases.hql", "sql/purchases/purchases-rejected.hql",
-			"sql/purchases/agg_purchases_daily.hql" }, autoStart = false)
+			"sql/purchases/agg_purchases_daily.hql"}, autoStart = false)
 	private HiveShell hiveShell;
 
 	@HiveRunnerSetup
@@ -30,12 +30,14 @@ public class AVAPurchaseTest {
 	};
 
 	@HiveSetupScript
-	private String setup = "set hive.support.sql11.reserved.keywords=false; SET hive.exec.dynamic.partition = true; SET hive.exec.dynamic.partition.mode = nonstrict; SET hive.mapred.mode = nonstrict;";
+	private String setup = "set hive.support.sql11.reserved.keywords=false; " +
+			"SET hive.exec.dynamic.partition = true; SET hive.exec.dynamic.partition.mode = nonstrict; " +
+			"SET hive.mapred.mode = nonstrict;";
 
 	@Before
 	public void setup() {
 		hiveShell.setHiveConfValue("ROOTPATH", "${hiveconf:hadoop.tmp.dir}");
-		hiveShell.setHiveConfValue("ENDDATE", "2008-08-15");
+		hiveShell.setHiveConfValue("ENDDATE", "20080815");
 		hiveShell.start();
 		// hiveShell.insertInto("test_db", "test_table").addRow("v1").commit();
 	}
@@ -51,11 +53,13 @@ public class AVAPurchaseTest {
 		String[] actual = hiveShell.executeQuery("SHOW TABLES").toArray(new String[0]);
 		assertThat(actual, hasItemInArray("purchase"));
 		assertThat(actual, hasItemInArray("purchase_rejected"));
+		assertThat(actual, hasItemInArray("agg_purchases_daily"));
+
 	}
 
 	@Test
 	public void testPurhasePartition() {
-		String[] actual = hiveShell.executeQuery("SELECT username FROM purchase p WHERE p.partition_date='2008-08-15'")
+		String[] actual = hiveShell.executeQuery("SELECT username FROM purchase p WHERE p.partition_date='20080815'")
 				.toArray(new String[0]);
 		assertThat(actual, hasItemInArray("sotnaskrik"));
 		assertThat(actual, hasItemInArray("modosirron"));
