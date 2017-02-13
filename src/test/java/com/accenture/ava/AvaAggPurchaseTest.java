@@ -16,9 +16,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggPurchaseTest {
-    //,
-    //assertThat(actual, hasItemInArray("agg_purchases_daily_user_button"));
-    @HiveSQL(files = {"sql/purchases/agg_purchases_plus.hql", "sql/purchases/original/agg_purchases_first_purchase_user_list.hql"}, autoStart = false)
+    @HiveSQL(files = {"sql/purchases/agg_purchases_plus_first_purchase_user_list.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -37,9 +35,11 @@ public class AvaAggPurchaseTest {
     public void setup() {
         hiveShell.setHiveConfValue("ROOTPATH", "${hiveconf:hadoop.tmp.dir}");
         hiveShell.setHiveConfValue("ENDDATE", "20080815");
+        hiveShell.setHiveConfValue("YEAR", "2008");
         hiveShell.start();
     }
-   /*Test for creating Table with Purchases.hql & agg_purchases_first_purchase_user_list.hql
+   /*
+    Test for creating Table with Purchases.hql & agg_purchases_first_purchase_user_list.hql
    */
     @Test
     public void testLoadFilePurchasePlus() {
@@ -48,20 +48,19 @@ public class AvaAggPurchaseTest {
         Assert.assertEquals(14, actual.length);
     }
 
-//    @Test
-//    public void testTablesInListIsCreated() {
-//        String[] actual = hiveShell.executeQuery("SHOW TABLES").toArray(new String[0]);
-//        assertThat(actual, hasItemInArray("purchase"));
-//        assertThat(actual, hasItemInArray("purchase_rejected"));
-//        assertThat(actual, hasItemInArray("agg_purchases_daily"));
-//
-//    }
-//
-//    @Test
-//    public void testPurhasePartition() {
-//        String[] actual = hiveShell.executeQuery("SELECT username FROM purchase p WHERE p.partition_date='20080815'")
-//                .toArray(new String[0]);
-//        assertThat(actual, hasItemInArray("sotnaskrik"));
-//        assertThat(actual, hasItemInArray("modosirron"));
-//    }
+    @Test
+    public void testPurhasePartition() {
+        String[] actual = hiveShell.executeQuery("SELECT username FROM purchase p WHERE p.partition_date='20080815'")
+                .toArray(new String[0]);
+        assertThat(actual, hasItemInArray("sotnaskrik"));
+        assertThat(actual, hasItemInArray("modosirron"));
+    }
+
+    @Test
+    public void testPurhaseUserId() {
+        String[] actual1 = hiveShell.executeQuery("SELECT userid FROM first_purchase_user_list f WHERE f.partition_date='20080815'")
+                .toArray(new String[0]);
+        assertThat(actual1, hasItemInArray("300000001"));
+
+    }
 }

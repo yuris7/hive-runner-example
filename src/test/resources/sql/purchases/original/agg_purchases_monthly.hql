@@ -48,6 +48,6 @@ WHERE   month(from_unixtime(unix_timestamp(partition_date, 'yyyyMMdd'))) = month
 AND  '${hiveconf:YEAR}' = substr(partition_date,0,4)
 GROUP BY  --data grouped by dimensions
 platform, age, gender, contenttype,
-appversion,paymenttype,currency,
-categoryname,genre, channel,
+appversion, paymenttype,currency,
+categoryname, genre, channel,
 region,state;

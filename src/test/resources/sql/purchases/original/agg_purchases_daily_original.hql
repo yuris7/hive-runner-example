@@ -1,3 +1,37 @@
+-- creation of target table for purchase entity
+CREATE EXTERNAL TABLE IF NOT EXISTS purchase (
+  tenantid STRING,
+  customerid STRING,
+  userid STRING,
+  username STRING,
+  purchasetime STRING,
+  sessionid STRING,
+  devicetype STRING,
+  deviceid STRING,
+  devicemodel STRING,
+  devicemake STRING,
+  deviceos_firmwareversion STRING,
+  deviceipaddress STRING,
+  appversion STRING,
+  platform STRING,
+  contentid STRING,
+  paymenttype STRING,
+  transactionid STRING,
+  discountedprice DECIMAL(15,2),
+  originalprice DECIMAL(15,2),
+  currency STRING,
+  state STRING,
+  contenttype STRING,
+  providername STRING,
+  servicename STRING,
+  solutionofferid STRING,
+  commerce_model STRING
+)
+PARTITIONED BY (partition_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE purchase PARTITION (partition_date='20080815');
+
+
 ---
 -- purchases 1D KPIs schema
 ---
@@ -16,13 +50,25 @@ genre string,
 channel string,
 region string,
 state string
-) PARTITIONED BY (PARTITION_DATE STRING)
+) PARTITIONED BY (partition_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE agg_purchases_daily PARTITION (partition_date='20080815');
 
+-- creation of target table for vod_catalog entity
+CREATE EXTERNAL TABLE IF NOT EXISTS vod_catalog (
+  contentid STRING,
+  title STRING,
+  categoryname STRING,
+  genre STRING,
+  contentduration DOUBLE
+)
+PARTITIONED BY (partition_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE vod_catalog PARTITION (partition_date='20080815');
 ---
 -- purchases related daily KPIs
 --A_10,A_12,A_13,A_153,A_159,A_160,A_161,A_162,A_175,A_176,A_177,A_178
 ---
-
 INSERT INTO TABLE agg_purchases_daily PARTITION  (partition_date = '${hiveconf:ENDDATE}')
 SELECT
 	platform,
@@ -31,7 +77,7 @@ SELECT
 	appversion,
 	paymenttype,
 	currency,
-	SUM(revenues) AS revenues, --all revenues for for corresponding set of dimensions
+	SUM(revenues) AS revenues, --all revenues for corresponding set of dimensions
 	SUM(purchases) AS purchases,
 	COALESCE(categoryname, channel_category) AS  categoryname,
 	COALESCE(contenttype, channel_type) AS  contenttype,
