@@ -1,4 +1,5 @@
 package com.accenture.ava;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
 
@@ -16,6 +17,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggPurchaseTest {
+
     @HiveSQL(files = {"sql/purchases/agg_purchases_plus_first_purchase_user_list.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
@@ -63,4 +65,5 @@ public class AvaAggPurchaseTest {
         assertThat(actual1, hasItemInArray("300000001"));
 
     }
+  
 }
