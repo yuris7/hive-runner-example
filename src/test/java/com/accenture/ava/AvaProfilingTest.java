@@ -1,8 +1,5 @@
 package com.accenture.ava;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +41,7 @@ public class AvaProfilingTest {
     @Test
     public void testLoadFileProfiling() {
         String[] actual = hiveShell.executeQuery("SELECT * FROM profiling").toArray(new String[0]);
-        Assert.assertEquals(214, actual.length);
+        Assert.assertEquals(219, actual.length);
     }
 
 //    @Test
