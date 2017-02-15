@@ -14,6 +14,7 @@ average_purchases_per_user decimal(15,4),
 partition_date string)
 PARTITIONED BY (year string, week int)
 LOCATION '${hiveconf:ROOTPATH}/processed/AVA/agg_purchases_weekly_user_button';
+-- LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE agg_purchases_weekly_user_button PARTITION (year ='2008', week = 4);
 
 ---
 -- weekly KPIs/purchases/users button

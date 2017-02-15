@@ -39,7 +39,7 @@ public class AvaAggPurchasesDaily {
 	}
 
 	@Test
-	public void testLoadFilePurchasePlus() {
+	public void testLoadFilePurchaseDaily() {
 		String[] actual = hiveShell.executeQuery("SELECT * FROM agg_purchases_daily").toArray(new String[0]);
 		Assert.assertEquals(53, actual.length);
 	}

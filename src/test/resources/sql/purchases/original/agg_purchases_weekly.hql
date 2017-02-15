@@ -19,7 +19,10 @@ state string,
 partition_date string
     )
 PARTITIONED BY (year string, week int)
-LOCATION '${hiveconf:ROOTPATH}/processed/AVA/agg_purchases_weekly';
+-- LOCATION '${hiveconf:ROOTPATH}/processed/AVA/agg_purchases_weekly';
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE agg_purchases_weekly PARTITION (year ='2008', week = 4);
+
 
 
 ---
