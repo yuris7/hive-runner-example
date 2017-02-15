@@ -18,8 +18,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 @RunWith(StandaloneHiveRunner.class)
 public class AVAPurchaseTest {
 
-	@HiveSQL(files = { "sql/purchases/purchases.hql", "sql/purchases/purchases-rejected.hql",
-			"sql/purchases/agg_purchases_daily.hql"}, autoStart = false)
+	@HiveSQL(files = { "sql/purchases/purchases.hql", "sql/purchases/purchases-rejected.hql"}, autoStart = false)
 	private HiveShell hiveShell;
 
 	@HiveRunnerSetup
@@ -53,7 +52,6 @@ public class AVAPurchaseTest {
 		String[] actual = hiveShell.executeQuery("SHOW TABLES").toArray(new String[0]);
 		assertThat(actual, hasItemInArray("purchase"));
 		assertThat(actual, hasItemInArray("purchase_rejected"));
-		assertThat(actual, hasItemInArray("agg_purchases_daily"));
 
 	}
 

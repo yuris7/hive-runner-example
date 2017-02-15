@@ -15,8 +15,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggPurchasesMonthlyTest {
     @HiveSQL(files = { "sql/profiling.hql", "sql/tv_chanels.hql",
-            "sql/purchases/original/agg_purchases_daily_original.hql", "sql/purchases/original/agg_purchases_monthly.hql",
-            "sql/purchases/original/agg_purchases_daily_original.hql" }, autoStart = false)
+            "sql/purchases/original/agg_purchases_daily_original.hql", "sql/purchases/original/agg_purchases_monthly.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup

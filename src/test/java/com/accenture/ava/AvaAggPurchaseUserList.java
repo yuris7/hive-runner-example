@@ -14,8 +14,7 @@ import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggPurchaseUserList {
-
-    @HiveSQL(files = {"sql/purchases/agg_purchases_plus_first_purchase_user_list.hql", "sql/purchases/original/purchase_user_list.hql"}, autoStart = false)
+    @HiveSQL(files = {"sql/purchases/purchases.hql", "sql/purchases/original/purchase_user_list.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -40,7 +39,7 @@ public class AvaAggPurchaseUserList {
     }
 
     @Test
-    public void testLoadFilePurchaseWeekly() {
+    public void testLoadFilePurchaseUserList() {
         String[] actual = hiveShell.executeQuery("SELECT * FROM purchase_user_list").toArray(new String[0]);
         Assert.assertEquals(18, actual.length);
     }
