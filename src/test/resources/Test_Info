@@ -1,10 +1,10 @@
 CREATE EXTERNAL TABLE IF NOT EXISTS agg_purchases_daily(
 platform string,
-age tinyint, -- Test assert
+//age tinyint, -- Test assert
 gender char(1),
 appversion string,
-paymenttype string, -- Test assert
-currency string, -- Test assert
+//paymenttype string, -- Test assert
+//currency string, -- Test assert
 revenues decimal(15,2), -- Test assert
 purchases int, -- Test assert
 categoryname string,
