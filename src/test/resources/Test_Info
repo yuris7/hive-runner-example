@@ -1,0 +1,21 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS agg_purchases_daily(
+platform string,
+age tinyint, -- Test assert
+gender char(1),
+appversion string,
+paymenttype string, -- Test assert
+currency string, -- Test assert
+revenues decimal(15,2), -- Test assert
+purchases int, -- Test assert
+categoryname string,
+contenttype string,
+genre string,
+channel string,
+region string,
+state string
+) PARTITIONED BY (partition_date STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/PURCHASE_20160302.csv' OVERWRITE INTO TABLE agg_purchases_daily PARTITION (partition_date='20080815');
+
+string - NULL & NOT NULL
+INT - 0 & > 0

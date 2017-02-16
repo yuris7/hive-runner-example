@@ -42,6 +42,13 @@ public class AvaAggPurchasesDaily {
 	public void testLoadFilePurchaseDaily() {
 		String[] actual = hiveShell.executeQuery("SELECT * FROM agg_purchases_daily").toArray(new String[0]);
 		Assert.assertEquals(53, actual.length);
+		String[] age_is_not_null = hiveShell.executeQuery("SELECT age FROM agg_purchases_daily WHERE age IS NOT NULL").toArray(new String[0]);
+		Assert.assertNotNull(age_is_not_null);
+//		for (String string : age_is_not_null) {
+//			System.out.println(">>>>>>>>" + string);
+//		}
+		String[] age_is_null = hiveShell.executeQuery("SELECT age FROM agg_purchases_daily WHERE age IS NULL").toArray(new String[0]);
+		Assert.assertNotEquals(age_is_not_null,age_is_null);
 	}
 
 }
