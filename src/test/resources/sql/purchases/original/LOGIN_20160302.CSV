@@ -1,0 +1,127 @@
+tenantDefault;300000001;ocehcaprehtul;;20160301144352;IOS;1030100002;providerDefault;serviceDefault;;IOS-300000001;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000004;namwennosduj;;20160301121255;CHROMECAST;1030100008;providerDefault;serviceDefault;;CHROMECAST-300000004;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100012;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100013;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100015;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100018;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100022;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301005346;DOWNLOAD;1030100027;providerDefault;serviceDefault;;DOWNLOAD-300000006;;;1.0;100.0.0.20;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301034328;IPAD;1030100014;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;Y;;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301034328;IPAD;1030100015;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;Y;;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301034328;IPAD;1030100017;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;Y;;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301151432;IPAD;1030100324;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301151432;IPAD;1030100325;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301151432;IPAD;1030100327;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000007;ydarbnelg;;20160301151432;IPAD;1030100330;providerDefault;serviceDefault;;IPAD-300000007;;;1.0;100.0.0.24;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000008;yoccmnivla;;20160301222845;OTTSTB;1030100016;providerDefault;serviceDefault;;OTTSTB-300000008;;;1.0;100.0.0.28;1;2016;Y;;LOGIN
+tenantDefault;300000010;retropodama;;20160301012027;PLAYREADY;1030100020;providerDefault;serviceDefault;;PLAYREADY-300000010;;;1.0;100.0.0.36;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000011;reyamnoside;;20160301130023;PLAYSTATION;1030100022;providerDefault;serviceDefault;;PLAYSTATION-300000011;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000011;reyamnoside;;20160301185530;PLAYSTATION;1030100406;providerDefault;serviceDefault;;PLAYSTATION-300000011;;;1.0;100.0.0.40;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000003;krapterrag;;20160301182632;XBOX;1030100272;providerDefault;serviceDefault;;XBOX-300000003;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000033;seyerkcirederf;;20160301210033;IOS;1030100034;providerDefault;serviceDefault;;IOS-300000033;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000034;noredlacarbbed;;20160301211033;IOS;1030100035;providerDefault;serviceDefault;;IOS-300000034;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000005;nosdivadennaeel;;20160301231756;CONNECTED;1030100010;providerDefault;serviceDefault;;CONNECTED-300000005;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000015;thgirwdrofnas;;20160301185012;IOS;1030100016;providerDefault;serviceDefault;;IOS-300000015;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000015;thgirwdrofnas;;20160301185012;IOS;1030100499;providerDefault;serviceDefault;;IOS-300000015;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000015;thgirwdrofnas;;20160301185012;IOS;1030100501;providerDefault;serviceDefault;;IOS-300000015;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000015;thgirwdrofnas;;20160301185012;IOS;1030100503;providerDefault;serviceDefault;;IOS-300000015;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000015;thgirwdrofnas;;20160301185012;IOS;1030100505;providerDefault;serviceDefault;;IOS-300000015;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000018;mahargsaiasi;;20160301185012;IOS;1030100019;providerDefault;serviceDefault;;IOS-300000018;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000020;llewxamociredef;;20160301185012;XBOX;1030100020;providerDefault;serviceDefault;;XBOX-300000020;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000024;sarertnocnotsniw;;20160301185012;XBOX;1030100024;providerDefault;serviceDefault;;XBOX-300000024;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000026;drallabhtrowslle;;20160301185012;XBOX;1030100026;providerDefault;serviceDefault;;XBOX-300000026;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000028;eleetsolinad;;20160301185012;XBOX;1030100028;providerDefault;serviceDefault;;XBOX-300000028;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000003;krapterrag;;20160301153435;ANDROID;1030100552;providerDefault;serviceDefault;;ANDROID-300000003;;;1.0;100.0.0.8;1;2016;Y;;LOGIN
+tenantDefault;300000004;namwennosduj;;20160301202959;XBOX;1030100453;providerDefault;serviceDefault;;XBOX-300000004;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000004;namwennosduj;;20160301124655;XBOX;1030100604;providerDefault;serviceDefault;;XBOX-300000004;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000005;nosdivadennaeel;;20160301141833;XBOX;1030100005;providerDefault;serviceDefault;;XBOX-300000005;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000005;nosdivadennaeel;;20160301011135;ROKU;1030100607;providerDefault;serviceDefault;;ROKU-300000005;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301015300;XBOX;1030100570;providerDefault;serviceDefault;;XBOX-300000006;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000002;relytessej;;20160301003352;ROKU;1030100004;providerDefault;serviceDefault;;ROKU-300000002;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000002;relytessej;;20160301003352;ROKU;1030100005;providerDefault;serviceDefault;;ROKU-300000002;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000002;relytessej;;20160301221857;ROKU;1030100656;providerDefault;serviceDefault;;ROKU-300000002;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000002;relytessej;;20160301221857;ROKU;1030100657;providerDefault;serviceDefault;;ROKU-300000002;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000003;krapterrag;;20160301225339;XBOX;1030100625;providerDefault;serviceDefault;;XBOX-300000003;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000005;nosdivadennaeel;;20160301215133;CONNECTED;1030100627;providerDefault;serviceDefault;;CONNECTED-300000005;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000009;sllawecyob;;20160301011554;PCTV;1030100018;providerDefault;serviceDefault;;PCTV-300000009;;;1.0;100.0.0.32;1;2016;Y;;LOGIN
+tenantDefault;300000009;sllawecyob;;20160301011554;PCTV;1030100019;providerDefault;serviceDefault;;PCTV-300000009;;;1.0;100.0.0.32;1;2016;Y;;LOGIN
+tenantDefault;300000002;relytessej;;20160301190000;XBOX;1030100687;providerDefault;serviceDefault;;XBOX-300000002;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000003;krapterrag;;20160301190000;XBOX;1030100661;providerDefault;serviceDefault;;XBOX-300000003;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000004;namwennosduj;;20160301131658;ROKU;1030100006;providerDefault;serviceDefault;;ROKU-300000004;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301135032;ROKU;1030100690;providerDefault;serviceDefault;;ROKU-300000006;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000006;mahargyelnats;;20160301191324;ANDROID;1030100719;providerDefault;serviceDefault;;ANDROID-300000006;;;1.0;100.0.0.8;1;2016;Y;;LOGIN
+tenantDefault;300000009;sllawecyob;;20160301150010;PCTV;1030100692;providerDefault;serviceDefault;;PCTV-300000009;;;1.0;100.0.0.32;1;2016;Y;;LOGIN
+tenantDefault;300000012;dlaregztifelledra;;20160301205000;ROKU;1030100024;providerDefault;serviceDefault;;ROKU-300000012;;;1.0;100.0.0.44;1;2016;Y;;LOGIN
+tenantDefault;300000012;dlaregztifelledra;;20160301142536;ROKU;1030100763;providerDefault;serviceDefault;;ROKU-300000012;;;1.0;100.0.0.44;1;2016;Y;;LOGIN
+tenantDefault;300000013;ssegrubsido;;20160301133336;XBOX;1030100013;providerDefault;serviceDefault;;XBOX-300000013;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100572;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100573;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100572;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100573;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100575;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100578;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;CONNECTED;1030100582;providerDefault;serviceDefault;;CONNECTED-300000059;;;1.0;100.0.0.16;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000060;ecreipnohtanhoj;;20160301185459;CONNECTED;1030100576;providerDefault;serviceDefault;;CONNECTED-300000060;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;CONNECTED;1030100577;providerDefault;serviceDefault;;CONNECTED-300000061;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;CONNECTED;1030100578;providerDefault;serviceDefault;;CONNECTED-300000061;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;CONNECTED;1030100580;providerDefault;serviceDefault;;CONNECTED-300000061;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;CONNECTED;1030100583;providerDefault;serviceDefault;;CONNECTED-300000061;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;CONNECTED;1030100587;providerDefault;serviceDefault;;CONNECTED-300000061;;;1.0;100.0.0.16;1;2016;Y;;LOGIN
+tenantDefault;300000055;rehgallageinaoj;;20160301185459;IOS;1030100565;providerDefault;serviceDefault;;IOS-300000055;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000055;rehgallageinaoj;;20160301185459;IOS;1030100566;providerDefault;serviceDefault;;IOS-300000055;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000056;namdeirfainesey;;20160301185459;IOS;1030100566;providerDefault;serviceDefault;;IOS-300000056;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000056;namdeirfainesey;;20160301185459;IOS;1030100567;providerDefault;serviceDefault;;IOS-300000056;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;DOWNLOAD;1030100862;providerDefault;serviceDefault;;DOWNLOAD-300000059;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000060;ecreipnohtanhoj;;20160301185459;DOWNLOAD;1030100865;providerDefault;serviceDefault;;DOWNLOAD-300000060;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;DOWNLOAD;1030100858;providerDefault;serviceDefault;;DOWNLOAD-300000061;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301025459;DOWNLOAD;1030100903;providerDefault;serviceDefault;;DOWNLOAD-300000061;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;DOWNLOAD;1030100899;providerDefault;serviceDefault;;DOWNLOAD-300000059;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000055;rehgallageinaoj;;20160301185459;CHROMECAST;1030100890;providerDefault;serviceDefault;;CHROMECAST-300000055;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000056;namdeirfainesey;;20160301185459;CHROMECAST;1030100897;providerDefault;serviceDefault;;CHROMECAST-300000056;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;DOWNLOAD;1030100961;providerDefault;serviceDefault;;DOWNLOAD-300000059;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000060;ecreipnohtanhoj;;20160301185459;DOWNLOAD;1030100962;providerDefault;serviceDefault;;DOWNLOAD-300000060;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301185459;DOWNLOAD;1030100957;providerDefault;serviceDefault;;DOWNLOAD-300000061;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000061;ppankdoowle;;20160301025459;DOWNLOAD;1030100988;providerDefault;serviceDefault;;DOWNLOAD-300000061;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;DOWNLOAD;1030100984;providerDefault;serviceDefault;;DOWNLOAD-300000059;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000059;sairanebeur;;20160301185459;DOWNLOAD;1030100985;providerDefault;serviceDefault;;DOWNLOAD-300000059;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000055;rehgallageinaoj;;20160301185459;CHROMECAST;1030100976;providerDefault;serviceDefault;;CHROMECAST-300000055;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000055;rehgallageinaoj;;20160301185459;CHROMECAST;1030100977;providerDefault;serviceDefault;;CHROMECAST-300000055;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000056;namdeirfainesey;;20160301185459;CHROMECAST;1030100982;providerDefault;serviceDefault;;CHROMECAST-300000056;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000056;namdeirfainesey;;20160301185459;CHROMECAST;1030100983;providerDefault;serviceDefault;;CHROMECAST-300000056;;;1.0;100.0.0.12;1;2016;Y;;LOGIN
+tenantDefault;300000095;notyalcydolem;;20160301040507;IOS;1030100108;providerDefault;serviceDefault;;IOS-300000095;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000097;aipatahsrat;;20160301102500;PLAYSTATION;1030100120;providerDefault;serviceDefault;;PLAYSTATION-300000097;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000097;aipatahsrat;;20160301102500;PLAYSTATION;1030101262;providerDefault;serviceDefault;;PLAYSTATION-300000097;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000097;aipatahsrat;;20160301122500;PLAYSTATION;1030101264;providerDefault;serviceDefault;;PLAYSTATION-300000097;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301082100;IOS;1030100197;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;2.2;2016;Y;;LOGIN
+tenantDefault;300000183;nottapnotrub;;20160301100000;IOS;1030100198;providerDefault;serviceDefault;;IOS-300000183;;;1.0;100.0.0.0;2.2;2016;Y;;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301144352;IOS;1030101852;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301144352;IOS;1030101853;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301144352;IOS;1030101855;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301144352;IOS;1030101858;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301150010;IOS;1030101858;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000185;hcnylkcub;;20160301111234;ROKU;1030100199;providerDefault;serviceDefault;;ROKU-300000185;;;1.0;100.0.0.4;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000185;hcnylkcub;;20160301111234;ROKU;1030100200;providerDefault;serviceDefault;;ROKU-300000185;;;1.0;100.0.0.4;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000185;hcnylkcub;;20160301111234;ROKU;1030100202;providerDefault;serviceDefault;;ROKU-300000185;;;1.0;100.0.0.4;1;2016;N;Failed to login due to error;LOGIN
+tenantDefault;300000185;hcnylkcub;;20160301111000;ROKU;1030101885;providerDefault;serviceDefault;;ROKU-300000185;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000184;srednasreklaw;;20160301111000;ROKU;1030101871;providerDefault;serviceDefault;;ROKU-300000184;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301150010;IOS;1030101898;providerDefault;serviceDefault;;IOS-300000182;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000185;hcnylkcub;;20160301111000;ROKU;1030101892;providerDefault;serviceDefault;;ROKU-300000185;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000184;srednasreklaw;;20160301111000;ROKU;1030101903;providerDefault;serviceDefault;;ROKU-300000184;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000182;sajoruaeb;;20160301111000;ROKU;1030101906;providerDefault;serviceDefault;;ROKU-300000182;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000183;nottapnotrub;;20160301111000;ROKU;1030101853;providerDefault;serviceDefault;;ROKU-300000183;;;1.0;100.0.0.4;1;2016;Y;;LOGIN
+tenantDefault;300000050;yelsomeniralc;;20160301173856;IOS;1030100051;providerDefault;serviceDefault;;IOS-300000050;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000051;legnaramrub;;20160301173856;IOS;1030100052;providerDefault;serviceDefault;;IOS-300000051;;;1.0;100.0.0.0;1;2016;Y;;LOGIN
+tenantDefault;300000062;sdleihseelorac;;20160301173856;DOWNLOAD;1030100582;providerDefault;serviceDefault;;DOWNLOAD-300000062;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000058;ztrawhcsnohs;;20160301173856;XBOX;1030101083;providerDefault;serviceDefault;;XBOX-300000058;;;1.0;100.0.0.48;1;2016;Y;;LOGIN
+tenantDefault;300000199;sbbigyendis;;20160301090909;PLAYSTATION;1030100227;providerDefault;serviceDefault;;PLAYSTATION-300000199;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000198;ttennebkcid;;20160301090909;PLAYSTATION;1030100226;providerDefault;serviceDefault;;PLAYSTATION-300000198;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000198;ttennebkcid;;20160301090909;PLAYSTATION;1030100227;providerDefault;serviceDefault;;PLAYSTATION-300000198;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000197;rebewdraw;;20160301090909;PLAYSTATION;1030100225;providerDefault;serviceDefault;;PLAYSTATION-300000197;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000197;rebewdraw;;20160301090909;PLAYSTATION;1030100226;providerDefault;serviceDefault;;PLAYSTATION-300000197;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000197;rebewdraw;;20160301090909;PLAYSTATION;1030100228;providerDefault;serviceDefault;;PLAYSTATION-300000197;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000200;srevirleugim;;20160301090909;DOWNLOAD;1030100223;providerDefault;serviceDefault;;DOWNLOAD-300000200;;;1.0;100.0.0.20;1;2016;Y;;LOGIN
+tenantDefault;300000201;drallabretnuh;;20160301090909;PLAYSTATION;1030100229;providerDefault;serviceDefault;;PLAYSTATION-300000201;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000202;nostawnotyalc;;20160301090909;PLAYSTATION;1030100230;providerDefault;serviceDefault;;PLAYSTATION-300000201;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000202;nostawnotyalc;;20160301090909;PLAYSTATION;1030100231;providerDefault;serviceDefault;;PLAYSTATION-300000201;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000202;nostawnotyalc;;20160301090909;PLAYSTATION;1030100233;providerDefault;serviceDefault;;PLAYSTATION-300000201;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
+tenantDefault;300000203;setnavrececnirp;;20160301090909;PLAYSTATION;1030100231;providerDefault;serviceDefault;;PLAYSTATION-300000202;;;1.0;100.0.0.40;1;2016;Y;;LOGIN
