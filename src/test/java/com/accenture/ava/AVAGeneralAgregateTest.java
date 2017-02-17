@@ -11,7 +11,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-
 @RunWith(StandaloneHiveRunner.class)
 public class AVAGeneralAgregateTest {
     @HiveSQL(files = {"sql/vod_catalog.hql",
