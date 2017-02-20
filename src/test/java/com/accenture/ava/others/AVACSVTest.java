@@ -1,4 +1,4 @@
-package com.accenture.ava;
+package com.accenture.ava.others;
 
 import org.junit.Assert;
 import org.junit.Before;
