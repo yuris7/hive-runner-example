@@ -1,4 +1,4 @@
-package com.accenture.ava;
+package com.accenture.ava.aggtests;
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;

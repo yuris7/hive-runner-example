@@ -1,4 +1,4 @@
-package com.accenture.ava;
+package com.accenture.ava.aggtests;
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
@@ -19,7 +19,12 @@ public class AvaAggLoyaltyTest {
             setHiveExecutionEngine("mr");
         }
     };
-    @HiveSQL(files = {"sql/purchases/original/watching.hql", "sql/purchases/original/agg_loyalty_schemas.hql","sql/profiling.hql", "sql/user_action.hql",
+    @HiveSQL(files = {
+            "sql/profiling.hql",
+            "sql/purchases/original/watching.hql",
+            "sql/purchases/original/agg_loyalty_schemas.hql",
+            "sql/profiling.hql",
+            "sql/user_action.hql",
             "sql/purchases/original/agg_loyalty.hql"}, autoStart = false)
 
     private HiveShell hiveShell;
@@ -37,7 +42,13 @@ public class AvaAggLoyaltyTest {
         hiveShell.setHiveConfValue("MONTH", "200808");
         hiveShell.start();
     }
-
+ /**    ASSERTIONS:
+                    * loyal
+                    * lost
+                    * new
+                    * reconnected
+                    * distinct_users
+  */
     @Test
     public void testLoadFileLoyalty() {
         String[] actual = hiveShell.executeQuery(
@@ -46,14 +57,6 @@ public class AvaAggLoyaltyTest {
         		for (String string : actual) {
 			System.out.println(">>>>>>>>" + string);
 		}
-//        // assert when --//-- is not NULL and NULL
-//        String[] logged_accesses_is_not_null = hiveShell.executeQuery(
-//                "SELECT logged_accesses FROM agg_logins_timeband WHERE logged_accesses IS NOT NULL").toArray(new String[0]);
-//        Assert.assertNotNull(logged_accesses_is_not_null);
-//        String[] logged_accesses_is_null = hiveShell.executeQuery(
-//                "SELECT logged_accesses FROM agg_logins_timeband WHERE logged_accesses IS NULL").toArray(new String[0]);
-//        Assert.assertNotEquals(logged_accesses_is_not_null,logged_accesses_is_null);
-
     }
 
     @Test
@@ -66,12 +69,20 @@ public class AvaAggLoyaltyTest {
         }
     }
 
+    /** Example for LOYAL & LOST
+     */
+
     @Test
     public void testAggLoyaltyDaily() {
-        String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_loyalty_daily").toArray(new String[0]);
-        Assert.assertEquals(10, actual.length);
-        for (String string : actual) {
+        String[] loyal = hiveShell.executeQuery(
+                "SELECT loyal FROM agg_loyalty_daily").toArray(new String[0]);
+        Assert.assertEquals(10, loyal.length);
+        for (String string : loyal) {
+            System.out.println(">>>>>>>>" + string);
+        }
+        String[] lost = hiveShell.executeQuery(
+                "SELECT lost FROM agg_loyalty_daily").toArray(new String[0]);
+        for (String string : lost) {
             System.out.println(">>>>>>>>" + string);
         }
 

@@ -1,4 +1,4 @@
-package com.accenture.ava.others;
+package com.accenture.ava.generaltests;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;

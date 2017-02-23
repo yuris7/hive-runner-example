@@ -1,4 +1,4 @@
-package com.accenture.ava;
+package com.accenture.ava.aggtests;
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
@@ -160,10 +160,10 @@ public class AvaAggAccessesTest {
         Assert.assertNotEquals(failed_logins_is_not_null,failed_logins_is_null);
 
    }
-
-//    accesses_multiple_platform_daily/ accesses_multiple_platform_weekly / accesses_multiple_platform_monthly
-//    logged_users_more_platforms int,
-//    distinct_users int
+/** ASSERTIONS FOR accesses_multiple_platform_daily/ accesses_multiple_platform_weekly / accesses_multiple_platform_monthly :
+                                                 * logged_users_more_platforms int,
+                                                 * distinct_users int
+ */
     @Test
     public void testLoadFileAccessesMultiplePlatformDaily() {
         String[] actual = hiveShell.executeQuery(

@@ -1,4 +1,4 @@
-package com.accenture.ava.others;
+package com.accenture.ava.generaltests;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,8 +13,8 @@ import com.klarna.hiverunner.annotations.HiveSetupScript;
 import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggPurchaseUserList {
-    @HiveSQL(files = {"sql/purchases/purchases.hql", "sql/purchases/original/purchase_user_list.hql"}, autoStart = false)
+public class AvaFirstPurchaseList {
+    @HiveSQL(files = {"sql/purchases/purchases.hql", "sql/purchases/agg_purchases_plus_first_purchase_user_list.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -39,8 +39,8 @@ public class AvaAggPurchaseUserList {
     }
 
     @Test
-    public void testLoadFilePurchaseUserList() {
-        String[] actual = hiveShell.executeQuery("SELECT * FROM purchase_user_list").toArray(new String[0]);
-        Assert.assertEquals(18, actual.length);
+    public void testLoadFileFirstPurchaseUserList() {
+        String[] actual = hiveShell.executeQuery("SELECT * FROM first_purchase_user_list").toArray(new String[0]);
+        Assert.assertEquals(14, actual.length);
     }
 }

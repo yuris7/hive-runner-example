@@ -107,3 +107,4 @@ partition_date string
     )
 PARTITIONED BY (month string)
 LOCATION '${hiveconf:ROOTPATH}/processed/AVA/agg_loyalty_monthly';
+

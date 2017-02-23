@@ -1,4 +1,4 @@
-package com.accenture.ava.others;
+package com.accenture.ava.generaltests;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
@@ -16,10 +16,9 @@ import com.klarna.hiverunner.annotations.HiveSetupScript;
 import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaTVChanelsTest {
-    @HiveSQL(files = {"sql/tv_chanels.hql",
-            "sql/tvchanels_rejected.hql",
-            "sql/tvchannels_staging.hql"}, autoStart = false)
+public class AVAVodCatalogTest {
+
+    @HiveSQL(files = {"sql/vod_catalog.hql"}, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -39,27 +38,13 @@ public class AvaTVChanelsTest {
         hiveShell.setHiveConfValue("ROOTPATH", "${hiveconf:hadoop.tmp.dir}");
         hiveShell.setHiveConfValue("ENDDATE", "20080815");
         hiveShell.start();
+        // hiveShell.insertInto("test_db", "test_table").addRow("v1").commit();
     }
 
     @Test
-    public void testLoadFilePurchase() {
-        String[] actual = hiveShell.executeQuery("SELECT * FROM tvchannels").toArray(new String[0]);
-        Assert.assertEquals(5, actual.length);
+    public void testLoadFileProfiling() {
+        String[] actual = hiveShell.executeQuery("SELECT * FROM vod_catalog").toArray(new String[0]);
+        Assert.assertEquals(236, actual.length);
     }
 
-    @Test
-    public void testTablesInListIsCreated() {
-        String[] actual = hiveShell.executeQuery("SHOW TABLES").toArray(new String[0]);
-        assertThat(actual, hasItemInArray("tvchannels"));
-        assertThat(actual, hasItemInArray("tvchannels_rejected"));
-        assertThat(actual, hasItemInArray("tvchannels_staging"));
-
-    }
-
-    @Test
-    public void testTVChanelsPartition() {
-        String[] actual = hiveShell.executeQuery("SELECT * FROM tvchannels t WHERE t.partition_date='20080815'")
-                .toArray(new String[0]);
-        assertThat(actual, hasItemInArray("300000005\tCHANNEL_5\tLIVE\tSPORT\tCOMEDY\t5\tBBC\t20080815"));
-    }
 }

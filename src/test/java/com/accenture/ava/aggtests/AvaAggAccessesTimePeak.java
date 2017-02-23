@@ -1,4 +1,4 @@
-package com.accenture.ava;
+package com.accenture.ava.aggtests;
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
@@ -13,7 +13,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggAccessesTimePeak {
-    @HiveSQL(files = {"sql/purchases/original/login.hql","sql/profiling.hql", "sql/user_action.hql",
+    @HiveSQL(files = {
+            "sql/user_action.hql",
+            "sql/purchases/original/login.hql",
+            "sql/profiling.hql",
+            "sql/purchases/original/agg_accesses.hql",
+            "sql/purchases/original/login.hql",
+            "sql/profiling.hql", "sql/user_action.hql",
             "sql/purchases/original/agg_accesses_time_peak.hql"}, autoStart = false)
 
     private HiveShell hiveShell;

@@ -1,4 +1,4 @@
-package com.accenture.ava.others;
+package com.accenture.ava.generaltests;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,9 +13,11 @@ import com.klarna.hiverunner.annotations.HiveSetupScript;
 import com.klarna.hiverunner.config.HiveRunnerConfig;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggPurchaseWeekUserButton {
+public class AvaAggPurchaseMonthlyUserButtonTest {
+
     @HiveSQL(files = { "sql/profiling.hql", "sql/tv_chanels.hql",
-            "sql/purchases/original/agg_purchases_daily_original.hql", "sql/purchases/original/agg_purchases_weekly_user_button.hql" }, autoStart = false)
+            "sql/purchases/original/agg_purchases_daily_original.hql", "sql/purchases/original/agg_purchases_monthly.hql",
+            "sql/purchases/original/agg_purchases_daily_original.hql", "sql/purchases/original/agg_purchases_monthly_user_button.hql" }, autoStart = false)
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -36,12 +38,13 @@ public class AvaAggPurchaseWeekUserButton {
         hiveShell.setHiveConfValue("ENDDATE", "20080815");
         hiveShell.setHiveConfValue("YEAR", "2008");
         hiveShell.setHiveConfValue("WEEK", "4");
+        hiveShell.setHiveConfValue("MONTH", "200808");
         hiveShell.start();
     }
 
     @Test
-    public void testLoadFilePurchaseWeeklyUserButton() {
-        String[] actual = hiveShell.executeQuery("SELECT * FROM agg_purchases_weekly_user_button").toArray(new String[0]);
+    public void testLoadFilePurchaseMonthUserButton() {
+        String[] actual = hiveShell.executeQuery("SELECT * FROM agg_purchases_monthly_user_button").toArray(new String[0]);
         Assert.assertEquals(12, actual.length);
     }
 }
