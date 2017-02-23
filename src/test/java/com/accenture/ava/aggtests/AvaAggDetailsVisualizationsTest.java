@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggDetailsVisualizations {
+public class AvaAggDetailsVisualizationsTest {
     @HiveRunnerSetup
     public final HiveRunnerConfig CONFIG = new HiveRunnerConfig() {
         {
