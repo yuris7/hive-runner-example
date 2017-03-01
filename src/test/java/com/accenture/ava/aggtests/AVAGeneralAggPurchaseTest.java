@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AVAGeneralAgregateTest {
+public class AVAGeneralAggPurchaseTest {
     @HiveSQL(files = {"sql/vod_catalog.hql",
             "sql/tv_chanels.hql",
             "sql/profiling.hql",

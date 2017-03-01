@@ -15,3 +15,5 @@ PARTITIONED BY (partition_date STRING)
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ';';
 LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/VOD_CATALOG_20160302.CSV' OVERWRITE INTO TABLE vod_catalog PARTITION (partition_date='20080815');
 
+
+--- 'src/test/resources/sql/purchases/VOD_CATALOG_20160302.CSV'

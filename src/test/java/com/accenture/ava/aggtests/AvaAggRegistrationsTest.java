@@ -47,7 +47,7 @@ public class AvaAggRegistrationsTest {
     }
 
     @Test
-    public void testagg_registrations_daily() {
+    public void testAggRegistrationsDaily() {
         String[] actual = hiveShell.executeQuery(
                 "SELECT * FROM agg_registrations_daily").toArray(new String[0]);
         Assert.assertEquals(66, actual.length);
@@ -57,7 +57,7 @@ public class AvaAggRegistrationsTest {
     }
 
     @Test
-    public void testagg_registrations_weekly() {
+    public void testAggRegistrationsWeekly() {
         String[] actual = hiveShell.executeQuery(
                 "SELECT * FROM agg_registrations_weekly").toArray(new String[0]);
         Assert.assertEquals(66, actual.length);
@@ -67,7 +67,7 @@ public class AvaAggRegistrationsTest {
     }
 
     @Test
-    public void testagg_registrations_monthly() {
+    public void testAggRegistrationsMonthly() {
         String[] actual = hiveShell.executeQuery(
                 "SELECT * FROM agg_registrations_monthly").toArray(new String[0]);
         Assert.assertEquals(66, actual.length);
