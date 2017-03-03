@@ -34,8 +34,7 @@ public class AvaVarLoggedMonthlyTest {
             "sql/purchases/original/var_monthly.hql"
 
     }, autoStart = false)
-    //"sql/user_action1.hql",
-
+    //"sql/user_action_original.hql",
     private HiveShell hiveShell;
 
     @HiveRunnerSetup
@@ -66,7 +65,7 @@ public class AvaVarLoggedMonthlyTest {
     public void testVarLoggedMonthly() {
         String[] actual = hiveShell.executeQuery(
                 "SELECT * FROM var_logged_monthly").toArray(new String[0]);
-        Assert.assertEquals(42, actual.length);
+        Assert.assertEquals(0, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }
@@ -76,7 +75,7 @@ public class AvaVarLoggedMonthlyTest {
     public void testVarAnonymousMonthly() {
         String[] actual = hiveShell.executeQuery(
                 "SELECT * FROM var_anonymous_monthly").toArray(new String[0]);
-        Assert.assertEquals(42, actual.length);
+        Assert.assertEquals(0, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }

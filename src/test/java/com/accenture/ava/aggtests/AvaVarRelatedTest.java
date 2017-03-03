@@ -12,25 +12,31 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggRegistrationsTest {
+public class AvaVarRelatedTest {
+    @HiveSQL(files = {
+            "sql/purchases/original/login.hql",
+            "sql/vod_catalog.hql",
+            "sql/profiling.hql",
+            "sql/tv_chanels.hql",
+            "sql/user_action_original.hql",
+            "sql/purchases/original/var_related.hql",
+            "sql/purchases/original/sjoin.hql",
+            "sql/purchases/original/agg_registrations.hql",
+            "sql/purchases/original/agg_loyalty_schemas.hql",
+            "sql/purchases/purchases.hql",
+            "sql/purchases/original/watching.hql",
+            "sql/purchases/original/var_related.hql"
+    }, autoStart = false)
+
+    private HiveShell hiveShell;
+
     @HiveRunnerSetup
     public final HiveRunnerConfig CONFIG = new HiveRunnerConfig() {
         {
             setHiveExecutionEngine("mr");
         }
     };
-    @HiveSQL(files = {
-            "sql/purchases/original/sjoin.hql",
-            "sql/profiling.hql",
-            "sql/purchases/original/watching.hql",
-            "sql/purchases/original/agg_loyalty_schemas.hql",
-            "sql/profiling.hql",
-            "sql/user_action_original.hql",
-            "sql/purchases/original/agg_loyalty.hql",
-            "sql/purchases/original/agg_registrations.hql"
-            }, autoStart = false)
 
-    private HiveShell hiveShell;
     @HiveSetupScript
     private String setup = "set hive.support.sql11.reserved.keywords=false; "
             + "SET hive.exec.dynamic.partition = true; SET hive.exec.dynamic.partition.mode = nonstrict; "
@@ -43,37 +49,28 @@ public class AvaAggRegistrationsTest {
         hiveShell.setHiveConfValue("YEAR", "2008");
         hiveShell.setHiveConfValue("WEEK", "4");
         hiveShell.setHiveConfValue("MONTH", "200808");
+        hiveShell.setHiveConfValue("FRAME", "7306090");
+
         hiveShell.start();
     }
 
     @Test
-    public void testAggRegistrationsDaily() {
+    public void testLoginUsersList() {
         String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_daily").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
+                "SELECT * FROM login_users_list").toArray(new String[0]);
+        Assert.assertEquals(0, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }
     }
 
     @Test
-    public void testAggRegistrationsWeekly() {
+    public void testAccessUsersList() {
         String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_weekly").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
+                "SELECT * FROM access_users_list").toArray(new String[0]);
+        Assert.assertEquals(42, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }
-    }
-
-    @Test
-    public void testAggRegistrationsMonthly() {
-        String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_monthly").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
-        for (String string : actual) {
-            System.out.println(">>>>>>>>" + string);
-        }
-
     }
 }

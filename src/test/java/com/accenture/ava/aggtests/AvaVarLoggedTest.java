@@ -18,7 +18,7 @@ public class AvaVarLoggedTest {
                 "sql/vod_catalog.hql",
                 "sql/profiling.hql",
                 "sql/tv_chanels.hql",
-                "sql/user_action1.hql",
+                "sql/user_action_original.hql",
                 "sql/purchases/original/var_related.hql",
                 "sql/purchases/original/sjoin.hql",
                 "sql/purchases/original/agg_registrations.hql",

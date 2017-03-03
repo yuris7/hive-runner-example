@@ -20,7 +20,7 @@ public class AvaVarAnonymousDailyTest {
             "sql/tv_chanels.hql",
             "sql/tvchanels_rejected.hql",
             "sql/tvchannels_staging.hql",
-            "sql/user_action1.hql",
+            "sql/user_action_original.hql",
             "sql/purchases/original/var_related.hql",
             "sql/purchases/original/sjoin.hql",
             "sql/purchases/original/agg_registrations.hql",

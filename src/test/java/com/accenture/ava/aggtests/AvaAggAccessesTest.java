@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AvaAggAccessesTest {
-    @HiveSQL(files = {"sql/purchases/original/login.hql","sql/profiling.hql", "sql/user_action1.hql",
+    @HiveSQL(files = {"sql/purchases/original/login.hql","sql/profiling.hql", "sql/user_action_original.hql",
             "sql/purchases/original/agg_accesses.hql"}, autoStart = false)
 
     private HiveShell hiveShell;
