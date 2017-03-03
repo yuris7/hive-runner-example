@@ -1,4 +1,5 @@
-package com.accenture.ava.aggtests; //var_logged_base
+package com.accenture.ava.aggtests;
+
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
@@ -12,21 +13,28 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaVarLoggedDaily {
+public class AvaVarLoggedMonthlyTest {
     @HiveSQL(files = {
+            "sql/user_action.hql",
+            "sql/purchases/original/watching.hql",
+            "sql/purchases/original/agg_loyalty_schemas.hql",
             "sql/purchases/original/login.hql",
+            "sql/purchases/original/var_related.hql",
             "sql/vod_catalog.hql",
             "sql/profiling.hql",
             "sql/tv_chanels.hql",
-            "sql/user_action.hql",
-            "sql/purchases/original/var_related.hql",
-            "sql/purchases/original/sjoin.hql",
-            "sql/purchases/original/agg_registrations.hql",
-            "sql/purchases/original/agg_loyalty_schemas.hql",
             "sql/purchases/purchases.hql",
+            "sql/purchases/original/var_anonymous_daily.hql",
             "sql/purchases/original/watching.hql",
-            "sql/purchases/original/var_logged_daily.hql"
+            "sql/purchases/original/var_related.hql",
+            "sql/purchases/original/agg_loyalty_schemas.hql",
+            "sql/purchases/original/var_logged_daily.hql",
+            "sql/purchases/purchases.hql",
+            "sql/purchases/original/var_logged.hql",
+            "sql/purchases/original/var_monthly.hql"
+
     }, autoStart = false)
+    //"sql/user_action1.hql",
 
     private HiveShell hiveShell;
 
@@ -55,10 +63,20 @@ public class AvaVarLoggedDaily {
     }
 
     @Test
-    public void testVarLoggedDaily() {
+    public void testVarLoggedMonthly() {
         String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM var_logged_base").toArray(new String[0]);
-        Assert.assertEquals(70, actual.length);
+                "SELECT * FROM var_logged_monthly").toArray(new String[0]);
+        Assert.assertEquals(42, actual.length);
+        for (String string : actual) {
+            System.out.println(">>>>>>>>" + string);
+        }
+    }
+
+    @Test
+    public void testVarAnonymousMonthly() {
+        String[] actual = hiveShell.executeQuery(
+                "SELECT * FROM var_anonymous_monthly").toArray(new String[0]);
+        Assert.assertEquals(42, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }

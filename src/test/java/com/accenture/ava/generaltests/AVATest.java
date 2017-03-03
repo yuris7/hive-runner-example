@@ -14,7 +14,7 @@ import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
 @RunWith(StandaloneHiveRunner.class)
 public class AVATest {
 
-	@HiveSQL(files = { "sql/user_action.hql",
+	@HiveSQL(files = {"sql/user_action1.hql",
 			"sql/user_action_rejected.hql",
 			"sql/vod_catalog.hql",
 			"sql/vod_catalog_rejected.hql",

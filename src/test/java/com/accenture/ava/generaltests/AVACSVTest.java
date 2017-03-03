@@ -13,7 +13,7 @@ import static org.hamcrest.collection.IsArrayContaining.hasItemInArray;
 
 @RunWith(StandaloneHiveRunner.class)
 public class AVACSVTest {
-	@HiveSQL(files = { "sql/user_action_CSV.hql" }, autoStart = false)
+	@HiveSQL(files = {"sql/user_action.hql"}, autoStart = false)
 	private HiveShell hiveShell;
 
 	@HiveSetupScript

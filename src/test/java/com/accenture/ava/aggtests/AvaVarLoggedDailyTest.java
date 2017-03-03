@@ -1,4 +1,4 @@
-package com.accenture.ava.aggtests;
+package com.accenture.ava.aggtests; //var_logged_base
 
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
@@ -12,22 +12,21 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaVarAnonymousDaily {
+public class AvaVarLoggedDailyTest {
     @HiveSQL(files = {
             "sql/purchases/original/login.hql",
             "sql/vod_catalog.hql",
             "sql/profiling.hql",
             "sql/tv_chanels.hql",
-            "sql/tvchanels_rejected.hql",
-            "sql/tvchannels_staging.hql",
-            "sql/user_action.hql",
+            "sql/user_action1.hql",
             "sql/purchases/original/var_related.hql",
             "sql/purchases/original/sjoin.hql",
             "sql/purchases/original/agg_registrations.hql",
             "sql/purchases/original/agg_loyalty_schemas.hql",
+            "sql/purchases/purchases.hql",
             "sql/purchases/original/watching.hql",
-            "sql/purchases/original/var_anonymous_daily.hql",
-            "sql/vod_catalog.hql"}, autoStart = false)
+            "sql/purchases/original/var_logged_daily.hql"
+    }, autoStart = false)
 
     private HiveShell hiveShell;
 
@@ -50,14 +49,16 @@ public class AvaVarAnonymousDaily {
         hiveShell.setHiveConfValue("YEAR", "2008");
         hiveShell.setHiveConfValue("WEEK", "4");
         hiveShell.setHiveConfValue("MONTH", "200808");
+        hiveShell.setHiveConfValue("FRAME", "7306090");
+
         hiveShell.start();
     }
 
     @Test
-    public void testVarAnonymousBase() {
+    public void testVarLoggedDaily() {
         String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM var_anonymous_base").toArray(new String[0]);
-        Assert.assertEquals(0, actual.length);
+                "SELECT * FROM var_logged_base").toArray(new String[0]);
+        Assert.assertEquals(70, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }

@@ -12,25 +12,32 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggRegistrationsTest {
+public class AvaVarAnonymousDailyTest {
+    @HiveSQL(files = {
+            "sql/purchases/original/login.hql",
+            "sql/vod_catalog.hql",
+            "sql/profiling.hql",
+            "sql/tv_chanels.hql",
+            "sql/tvchanels_rejected.hql",
+            "sql/tvchannels_staging.hql",
+            "sql/user_action1.hql",
+            "sql/purchases/original/var_related.hql",
+            "sql/purchases/original/sjoin.hql",
+            "sql/purchases/original/agg_registrations.hql",
+            "sql/purchases/original/agg_loyalty_schemas.hql",
+            "sql/purchases/original/watching.hql",
+            "sql/purchases/original/var_anonymous_daily.hql",
+            "sql/vod_catalog.hql"}, autoStart = false)
+
+    private HiveShell hiveShell;
+
     @HiveRunnerSetup
     public final HiveRunnerConfig CONFIG = new HiveRunnerConfig() {
         {
             setHiveExecutionEngine("mr");
         }
     };
-    @HiveSQL(files = {
-            "sql/purchases/original/sjoin.hql",
-            "sql/profiling.hql",
-            "sql/purchases/original/watching.hql",
-            "sql/purchases/original/agg_loyalty_schemas.hql",
-            "sql/profiling.hql",
-            "sql/user_action1.hql",
-            "sql/purchases/original/agg_loyalty.hql",
-            "sql/purchases/original/agg_registrations.hql"
-            }, autoStart = false)
 
-    private HiveShell hiveShell;
     @HiveSetupScript
     private String setup = "set hive.support.sql11.reserved.keywords=false; "
             + "SET hive.exec.dynamic.partition = true; SET hive.exec.dynamic.partition.mode = nonstrict; "
@@ -47,33 +54,12 @@ public class AvaAggRegistrationsTest {
     }
 
     @Test
-    public void testAggRegistrationsDaily() {
+    public void testVarAnonymousBase() {
         String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_daily").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
+                "SELECT * FROM var_anonymous_base").toArray(new String[0]);
+        Assert.assertEquals(0, actual.length);
         for (String string : actual) {
             System.out.println(">>>>>>>>" + string);
         }
-    }
-
-    @Test
-    public void testAggRegistrationsWeekly() {
-        String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_weekly").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
-        for (String string : actual) {
-            System.out.println(">>>>>>>>" + string);
-        }
-    }
-
-    @Test
-    public void testAggRegistrationsMonthly() {
-        String[] actual = hiveShell.executeQuery(
-                "SELECT * FROM agg_registrations_monthly").toArray(new String[0]);
-        Assert.assertEquals(66, actual.length);
-        for (String string : actual) {
-            System.out.println(">>>>>>>>" + string);
-        }
-
     }
 }

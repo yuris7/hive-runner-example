@@ -12,14 +12,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaAggAccessesTimePeak {
+public class AvaAggAccessesTimePeakTest {
     @HiveSQL(files = {
-            "sql/user_action.hql",
+            "sql/user_action1.hql",
             "sql/purchases/original/login.hql",
             "sql/profiling.hql",
             "sql/purchases/original/agg_accesses.hql",
             "sql/purchases/original/login.hql",
-            "sql/profiling.hql", "sql/user_action.hql",
+            "sql/profiling.hql", "sql/user_action1.hql",
             "sql/purchases/original/agg_accesses_time_peak.hql"}, autoStart = false)
 
     private HiveShell hiveShell;

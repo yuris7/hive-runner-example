@@ -12,12 +12,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(StandaloneHiveRunner.class)
-public class AvaReplacedAggAccesses {
+public class AvaReplacedAggAccessesTest {
     @HiveSQL(files = {
             "sql/purchases/original/login.hql",
             "sql/profiling.hql",
 
-            "sql/user_action.hql",
+            "sql/user_action1.hql",
             "sql/purchases/original/replaced_agg_accesses.hql"}, autoStart = false)
 
     private HiveShell hiveShell;

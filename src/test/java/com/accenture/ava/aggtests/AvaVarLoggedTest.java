@@ -1,6 +1,5 @@
 package com.accenture.ava.aggtests;
 
-
 import com.klarna.hiverunner.HiveShell;
 import com.klarna.hiverunner.StandaloneHiveRunner;
 import com.klarna.hiverunner.annotations.HiveRunnerSetup;
@@ -19,7 +18,7 @@ public class AvaVarLoggedTest {
                 "sql/vod_catalog.hql",
                 "sql/profiling.hql",
                 "sql/tv_chanels.hql",
-                "sql/user_action.hql",
+                "sql/user_action1.hql",
                 "sql/purchases/original/var_related.hql",
                 "sql/purchases/original/sjoin.hql",
                 "sql/purchases/original/agg_registrations.hql",

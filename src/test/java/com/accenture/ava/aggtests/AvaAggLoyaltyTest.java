@@ -24,7 +24,7 @@ public class AvaAggLoyaltyTest {
             "sql/purchases/original/watching.hql",
             "sql/purchases/original/agg_loyalty_schemas.hql",
             "sql/profiling.hql",
-            "sql/user_action.hql",
+            "sql/user_action1.hql",
             "sql/purchases/original/agg_loyalty.hql"}, autoStart = false)
 
     private HiveShell hiveShell;
