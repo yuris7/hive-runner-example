@@ -8,7 +8,6 @@ customerid string)
 partitioned by (partition_date string)
 LOCATION '${hiveconf:ROOTPATH}/processed/AVA/watching_customer_base';
 
-
 ---
 --List of all users + first day of action/on platform
 ---
@@ -107,4 +106,3 @@ partition_date string
     )
 PARTITIONED BY (month string)
 LOCATION '${hiveconf:ROOTPATH}/processed/AVA/agg_loyalty_monthly';
-

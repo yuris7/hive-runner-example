@@ -16,6 +16,7 @@ public class AvaReplacedAggAccesses {
     @HiveSQL(files = {
             "sql/purchases/original/login.hql",
             "sql/profiling.hql",
+
             "sql/user_action.hql",
             "sql/purchases/original/replaced_agg_accesses.hql"}, autoStart = false)
 

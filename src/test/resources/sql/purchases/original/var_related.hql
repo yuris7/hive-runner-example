@@ -1,3 +1,31 @@
+-- creation of target table for join entity  -- TABLE JOIN WAS CHANGED TO  SJOIN IN sjoin.hql & agg_registrations.hql FILES
+CREATE EXTERNAL TABLE IF NOT EXISTS sjoin (
+  tenantid STRING,
+  date STRING,
+  time STRING,
+  loginemail STRING,
+  clientipaddress STRING,
+  username STRING,
+  uniquecontract STRING,
+  timestamp STRING,
+  servicename STRING,
+  providername STRING,
+  referralsource STRING,
+  registrationmethod STRING,
+  registrationtrigger STRING
+)
+--- PARTITIONED BY (partition_date STRING)
+--- ROW FORMAT DELIMITED
+--- FIELDS TERMINATED BY '\073' ESCAPED BY '\\'
+--- LINES TERMINATED BY '\n'
+--- STORED AS TEXTFILE
+--- LOCATION '${hiveconf:ROOTPATH}/AVA/JOIN/input'
+PARTITIONED BY (partition_date STRING)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ';';
+LOAD DATA LOCAL INPATH 'src/test/resources/sql/purchases/original/JOIN_20160302.CSV' OVERWRITE INTO TABLE sjoin PARTITION (partition_date='20080815');
+
+
 ---
 --table structure
 ---
@@ -106,7 +134,7 @@ FROM (
 		referralsource,
 		registrationmethod,
 		registrationtrigger	
-		from `join`
+		from sjoin
 	WHERE partition_date = '${hiveconf:ENDDATE}') new_reg
 	FULL OUTER JOIN join_users_list all_reg
 	ON all_reg.uniquecontract  = new_reg.uniquecontract
